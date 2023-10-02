@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "utfprguia",
+    "slug": "utfprguia",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
