@@ -23,7 +23,7 @@ export default function Board() {
                     <Text>Moodle</Text>
                 </View>
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity onPress={openPortal} style={styles.button}><Image source={require("../../../assets/utfpr-logo.png")} style={{width: 80, height: 80, resizeMode: 'contain'}} /></TouchableOpacity>
+                    <TouchableOpacity onPress={openPortal} style={styles.button}><Image source={require("../../../assets/portal-aluno.png")} style={{width: 80, height: 80, resizeMode: 'contain'}} /></TouchableOpacity>
                     <Text>Portal Aluno</Text>
                 </View>
                 <View style={styles.buttonContainer}>
