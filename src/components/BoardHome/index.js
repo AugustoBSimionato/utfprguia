@@ -11,6 +11,9 @@ export default function Board() {
     const openCalendar = () => {
         Linking.openURL('https://sei.utfpr.edu.br/sei/publicacoes/controlador_publicacoes.php?acao=publicacao_visualizar&id_documento=3396653&id_orgao_publicacao=0');
     };
+    const openBiblio = () => {
+        Linking.openURL('https://webapp.utfpr.edu.br/bibservices/minhaBiblioteca');
+    };
 
     return (
         <View style={styles.container}>
@@ -30,7 +33,7 @@ export default function Board() {
             </View>
             <View style={styles.row}>
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity style={styles.button}><Image source={require("../../../assets/books.png")} style={{width: 80, height: 75, resizeMode: 'contain'}} /></TouchableOpacity>
+                    <TouchableOpacity onPress={openBiblio} style={styles.button}><Image source={require("../../../assets/books.png")} style={{width: 80, height: 75, resizeMode: 'contain'}} /></TouchableOpacity>
                     <Text>Bibliotech</Text>
                 </View>
                 <View style={styles.buttonContainer}>
