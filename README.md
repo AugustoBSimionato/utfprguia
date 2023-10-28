@@ -1,4 +1,4 @@
-# Nome do Projeto
+# UTFPRGuia
 
 ## Descrição
 
@@ -6,11 +6,7 @@ Breve descrição do projeto. Aqui você pode explicar o que o projeto faz, qual
 
 ## Disciplina
 
-Nome da disciplina.
-
-## Professor
-
-Nome do professor.
+Gerenciamento de Projetos de Software
 
 ## Alunos
 
