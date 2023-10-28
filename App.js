@@ -7,7 +7,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar />
-      <Image source={require("./assets/utfpr-logo.png")} style={{width: 170, height: 100, resizeMode: 'contain'}} />
+      <Image source={require("./assets/utfpr-logo-home.png")} style={{width: 200, height: 100, resizeMode: 'contain'}} />
       <Board />
       <List />
     </SafeAreaView>
