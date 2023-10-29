@@ -14,16 +14,19 @@ export default function Board() {
     const openBiblio = () => {
         Linking.openURL('https://webapp.utfpr.edu.br/bibservices/minhaBiblioteca');
     };
+    const openGrade = () => {
+        Linking.openURL('https://gradenahora.com.br/utfpr/grade_na_hora.html');
+    };
 
     return (
         <View style={styles.container}>
             <View style={styles.row}>
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity onPress={openMoodle} style={styles.button}><Image source={require("../../../assets/moodle-logo.png")} style={{width: 75, height: 75, resizeMode: 'contain'}} /></TouchableOpacity>
+                    <TouchableOpacity onPress={openMoodle} style={styles.button}><Image source={require("../../../assets/moodle-logo.png")} style={{width: 80, height: 45, resizeMode: 'contain'}} /></TouchableOpacity>
                     <Text>Moodle</Text>
                 </View>
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity onPress={openPortal} style={styles.button}><Image source={require("../../../assets/portal-aluno.png")} style={{width: 80, height: 80, resizeMode: 'contain'}} /></TouchableOpacity>
+                    <TouchableOpacity onPress={openPortal} style={styles.button}><Image source={require("../../../assets/utf-logo.png")} style={{width: 80, height: 35, resizeMode: 'contain'}} /></TouchableOpacity>
                     <Text>Portal Aluno</Text>
                 </View>
                 <View style={styles.buttonContainer}>
@@ -33,12 +36,12 @@ export default function Board() {
             </View>
             <View style={styles.row}>
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity onPress={openBiblio} style={styles.button}><Image source={require("../../../assets/books.png")} style={{width: 80, height: 75, resizeMode: 'contain'}} /></TouchableOpacity>
+                    <TouchableOpacity onPress={openBiblio} style={styles.button}><Image source={require("../../../assets/books.png")} style={{width: 80, height: 70, resizeMode: 'contain'}} /></TouchableOpacity>
                     <Text>Bibliotech</Text>
                 </View>
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity style={styles.button}><Image source={require("../../../assets/calendar.png")} style={{width: 80, height: 75, resizeMode: 'contain'}} /></TouchableOpacity>
-                    <Text>...</Text>
+                    <TouchableOpacity onPress={openGrade} style={styles.button}><Image source={require("../../../assets/grade.png")} style={{width: 80, height: 70, resizeMode: 'contain'}} /></TouchableOpacity>
+                    <Text>Grade na Hora</Text>
                 </View>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.button}><Image source={require("../../../assets/calendar.png")} style={{width: 80, height: 75, resizeMode: 'contain'}} /></TouchableOpacity>
