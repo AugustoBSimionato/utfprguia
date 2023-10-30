@@ -40,7 +40,7 @@ export default function Board() {
                     <Text>Bibliotech</Text>
                 </View>
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity onPress={openGrade} style={styles.button}><Image source={require("../../../assets/grade.png")} style={{width: 80, height: 70, resizeMode: 'contain'}} /></TouchableOpacity>
+                    <TouchableOpacity onPress={openGrade} style={styles.button}><Image source={require("../../../assets/grade-na-hora.png")} style={{width: 80, height: 70, resizeMode: 'contain'}} /></TouchableOpacity>
                     <Text>Grade na Hora</Text>
                 </View>
                 <View style={styles.buttonContainer}>
