@@ -1,23 +1,32 @@
 import React from "react";
-import { Text, View, StyleSheet, TouchableOpacity, FlatList } from "react-native";
+import { Text, View, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 
 export default function List() {
-    const data = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7"];
-
-    const renderItem = ({ item }) => (
-        <TouchableOpacity style={styles.item}>
-            <Text style={styles.itemText}>{item}</Text>
-        </TouchableOpacity>
-    );
-
     return (
         <View style={styles.container}>
-            <FlatList
-                contentContainerStyle={styles.list}
-                data={data}
-                keyExtractor={(item, index) => index.toString()}
-                renderItem={renderItem}
-            />
+            <ScrollView contentContainerStyle={styles.list}>
+                <TouchableOpacity style={styles.item}>
+                    <Text style={styles.itemText}>Item 1</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.item}>
+                    <Text style={styles.itemText}>Item 2</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.item}>
+                    <Text style={styles.itemText}>Item 3</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.item}>
+                    <Text style={styles.itemText}>Item 4</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.item}>
+                    <Text style={styles.itemText}>Item 5</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.item}>
+                    <Text style={styles.itemText}>Item 6</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.item}>
+                    <Text style={styles.itemText}>Item 7</Text>
+                </TouchableOpacity>
+            </ScrollView>
         </View>
     );
 }
@@ -34,8 +43,16 @@ const styles = StyleSheet.create({
     item: {
         padding: 15,
         marginVertical: 10,
-        backgroundColor: "#f9c2ff",
+        backgroundColor: "#f2f2f2",
         borderRadius: 5,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.2,
+        shadowRadius: 3,
+        elevation: 3,
     },
     itemText: {
         fontSize: 18,
