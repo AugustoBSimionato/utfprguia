@@ -1,31 +1,37 @@
-import React from "react";
-import { Text, View, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
+import React, { useState } from "react";
+import { Text, View, StyleSheet, TouchableOpacity, ScrollView, Linking } from "react-native";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function List() {
+    const [selectedItem, setSelectedItem] = useState(null);
+
+    const items = [
+        { title: 'Estudantil', content: 'Conteúdo do Estudantil', link: 'https://www.example.com/estudantil' },
+        { title: 'Item 2', content: 'Conteúdo do Item 2', link: 'https://www.example.com/item2' },
+        { title: 'Item 3', content: 'Conteúdo do Item 3', link: 'https://www.example.com/item3' },
+        
+    ];
+
     return (
         <View style={styles.container}>
             <ScrollView contentContainerStyle={styles.list}>
-                <TouchableOpacity style={styles.item}>
-                    <Text style={styles.itemText}>Item 1</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.item}>
-                    <Text style={styles.itemText}>Item 2</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.item}>
-                    <Text style={styles.itemText}>Item 3</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.item}>
-                    <Text style={styles.itemText}>Item 4</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.item}>
-                    <Text style={styles.itemText}>Item 5</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.item}>
-                    <Text style={styles.itemText}>Item 6</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.item}>
-                    <Text style={styles.itemText}>Item 7</Text>
-                </TouchableOpacity>
+                {items.map((item, index) => (
+                    <TouchableOpacity
+                        key={index}
+                        style={styles.item}
+                        onPress={() => setSelectedItem(selectedItem === index ? null : index)}
+                    >
+                        <Text style={styles.itemText}>{item.title}</Text>
+                        {selectedItem === index && 
+                            <View style={styles.expandedArea}>
+                                <Text style={styles.itemText}>{item.content}</Text>
+                                <TouchableOpacity style={styles.button} onPress={() => Linking.openURL(item.link)}>
+                                    <Icon name="external-link-square" size={25} color="#fff" />
+                                </TouchableOpacity>
+                            </View>
+                        }
+                    </TouchableOpacity>
+                ))}
             </ScrollView>
         </View>
     );
@@ -57,5 +63,20 @@ const styles = StyleSheet.create({
     itemText: {
         fontSize: 18,
         color: '#333',
+    },
+    expandedArea: {
+        marginTop: 10,
+        padding: 10,
+        backgroundColor: '#fff',
+        borderRadius: 5,
+    },
+    button: {
+        marginTop: 10,
+        width: 100,
+        height: 35,
+        justifyContent:'center',
+        alignItems:'center',
+        backgroundColor:'#7E62A3',
+        borderRadius:5
     },
 });
