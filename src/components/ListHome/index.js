@@ -6,15 +6,22 @@ export default function List() {
     const [selectedItem, setSelectedItem] = useState(null);
 
     const items = [
-        { title: 'Estudantil', content: 'Conteúdo do Estudantil', link: 'https://www.example.com/estudantil' },
-        { title: 'Item 2', content: 'Conteúdo do Item 2', link: 'https://www.example.com/item2' },
-        { title: 'Item 3', content: 'Conteúdo do Item 3', link: 'https://www.example.com/item3' },
-        
+        { title: 'Item 1', content: 'Conteúdo do Estudantil Conteúdo do Estudantil Conteúdo do Estudantil Estudantil Estudantil Estudantil Estudantil Estudantil Estudantil Estudantil Estudantil', link: '' },
+        { title: 'Item 2', content: 'Conteúdo do Item 2', link: '' },
+        { title: 'Item 3', content: 'Conteúdo do Item 3', link: '' },
+        { title: 'Item 4', content: 'Conteúdo do Item 4', link: '' },
+        { title: 'Item 5', content: 'Conteúdo do Item 5', link: '' },
+        { title: 'Item 6', content: 'Conteúdo do Item 6', link: '' },
+        { title: 'Item 7', content: 'Conteúdo do Item 7', link: '' },
     ];
 
     return (
         <View style={styles.container}>
-            <ScrollView contentContainerStyle={styles.list}>
+            <ScrollView 
+                contentContainerStyle={styles.list}
+                showsVerticalScrollIndicator={false}
+                indicatorStyle={'white'}
+            >
                 {items.map((item, index) => (
                     <TouchableOpacity
                         key={index}
@@ -24,7 +31,7 @@ export default function List() {
                         <Text style={styles.itemText}>{item.title}</Text>
                         {selectedItem === index && 
                             <View style={styles.expandedArea}>
-                                <Text style={styles.itemText}>{item.content}</Text>
+                                <Text style={styles.expandedAreaText}>{item.content}</Text>
                                 <TouchableOpacity style={styles.button} onPress={() => Linking.openURL(item.link)}>
                                     <Icon name="external-link-square" size={25} color="#fff" />
                                 </TouchableOpacity>
@@ -41,16 +48,20 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         width: '100%',
+        backgroundColor: '#7E62A3',
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
     },
     list: {
-        paddingHorizontal: 10,
+        paddingTop: 40,
+        paddingHorizontal: 15,
         alignItems: 'stretch',
     },
     item: {
         padding: 15,
         marginVertical: 10,
-        backgroundColor: "#f2f2f2",
-        borderRadius: 5,
+        backgroundColor: "#fff",
+        borderRadius: 10,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -58,7 +69,7 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.2,
         shadowRadius: 3,
-        elevation: 3,
+        elevation: 4,
     },
     itemText: {
         fontSize: 18,
@@ -67,8 +78,13 @@ const styles = StyleSheet.create({
     expandedArea: {
         marginTop: 10,
         padding: 10,
-        backgroundColor: '#fff',
+        backgroundColor: '#f2f2f2',
         borderRadius: 5,
+        alignItems:'center',
+    },
+    expandedAreaText:{
+        textAlign:'center',
+        fontSize: 18,
     },
     button: {
         marginTop: 10,
