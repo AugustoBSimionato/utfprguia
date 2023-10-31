@@ -17,6 +17,9 @@ export default function Board() {
     const openGrade = () => {
         Linking.openURL('https://gradenahora.com.br/utfpr/grade_na_hora.html');
     };
+    const openIncubadora = () => {
+        Linking.openURL('http://incubadora.cp.utfpr.edu.br/novo/');
+    };
 
     return (
         <View style={styles.container}>
@@ -44,8 +47,8 @@ export default function Board() {
                     <Text>Grade na Hora</Text>
                 </View>
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity style={styles.button}><Image source={require("../../../assets/calendar.png")} style={{width: 80, height: 75, resizeMode: 'contain'}} /></TouchableOpacity>
-                    <Text>...</Text>
+                    <TouchableOpacity onPress={openIncubadora} style={styles.button}><Image source={require("../../../assets/calendar.png")} style={{width: 80, height: 75, resizeMode: 'contain'}} /></TouchableOpacity>
+                    <Text>Incubadora UTFPR</Text>
                 </View>
             </View>
         </View>
