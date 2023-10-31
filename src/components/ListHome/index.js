@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         width: '100%',
-        backgroundColor: '#7E62A3',
+        backgroundColor: '#4B3766',
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
     },
@@ -93,6 +93,6 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         alignItems:'center',
         backgroundColor:'#7E62A3',
-        borderRadius:5
+        borderRadius:5,
     },
 });
