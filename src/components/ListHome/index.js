@@ -6,7 +6,7 @@ export default function List() {
     const [selectedItem, setSelectedItem] = useState(null);
 
     const items = [
-        { title: 'Item 1', content: 'Conteúdo do Estudantil Conteúdo do Estudantil Conteúdo do Estudantil Estudantil Estudantil Estudantil Estudantil Estudantil Estudantil Estudantil Estudantil', link: '' },
+        { title: 'Bolsa Estudantil', content: 'Conteúdo do Estudantil Conteúdo do Estudantil Conteúdo do Estudantil Estudantil Estudantil Estudantil Estudantil Estudantil Estudantil Estudantil Estudantil', link: '' },
         { title: 'Item 2', content: 'Conteúdo do Item 2', link: '' },
         { title: 'Item 3', content: 'Conteúdo do Item 3', link: '' },
         { title: 'Item 4', content: 'Conteúdo do Item 4', link: '' },
@@ -24,6 +24,7 @@ export default function List() {
             >
                 {items.map((item, index) => (
                     <TouchableOpacity
+                        activeOpacity={0.8}
                         key={index}
                         style={styles.item}
                         onPress={() => setSelectedItem(selectedItem === index ? null : index)}
@@ -73,6 +74,7 @@ const styles = StyleSheet.create({
     },
     itemText: {
         fontSize: 18,
+        fontWeight: '500',
         color: '#333',
     },
     expandedArea: {

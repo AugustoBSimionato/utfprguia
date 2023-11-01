@@ -34,7 +34,7 @@ export default function Board() {
                 </View>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity onPress={openCalendar} style={styles.button}><Image source={require("../../../assets/calendar.png")} style={{width: 80, height: 75, resizeMode: 'contain'}} /></TouchableOpacity>
-                    <Text>Calendário 2023</Text>
+                    <Text>Calendário</Text>
                 </View>
             </View>
             <View style={styles.row}>
@@ -44,11 +44,11 @@ export default function Board() {
                 </View>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity onPress={openGrade} style={styles.button}><Image source={require("../../../assets/grade-na-hora.png")} style={{width: 80, height: 70, resizeMode: 'contain'}} /></TouchableOpacity>
-                    <Text>Grade na Hora</Text>
+                    <Text>Montar grade</Text>
                 </View>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity onPress={openIncubadora} style={styles.button}><Image source={require("../../../assets/calendar.png")} style={{width: 80, height: 75, resizeMode: 'contain'}} /></TouchableOpacity>
-                    <Text>Incubadora UTFPR</Text>
+                    <Text>IUT</Text>
                 </View>
             </View>
         </View>
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         alignItems: 'center',
-        marginHorizontal: 20,
+        marginHorizontal: 25,
     },
     button: {
         justifyContent: 'center',
