@@ -44,7 +44,7 @@ export default function Board() {
                 </View>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity onPress={openGrade} style={styles.button}><Image source={require("../../../assets/grade-na-hora.png")} style={{width: 80, height: 70, resizeMode: 'contain'}} /></TouchableOpacity>
-                    <Text>Montar grade</Text>
+                    <Text>GradeNaHora</Text>
                 </View>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity onPress={openIncubadora} style={styles.button}><Image source={require("../../../assets/calendar.png")} style={{width: 80, height: 75, resizeMode: 'contain'}} /></TouchableOpacity>
