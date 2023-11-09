@@ -30,7 +30,7 @@ export default function Board() {
                 </View>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity onPress={openPortal} style={styles.button}><Image source={require("../../../assets/utf-logo.png")} style={{width: 80, height: 35, resizeMode: 'contain'}} /></TouchableOpacity>
-                    <Text>Portal Alun</Text>
+                    <Text>Portal Aluno</Text>
                 </View>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity onPress={openCalendar} style={styles.button}><Image source={require("../../../assets/calendar.png")} style={{width: 80, height: 75, resizeMode: 'contain'}} /></TouchableOpacity>
