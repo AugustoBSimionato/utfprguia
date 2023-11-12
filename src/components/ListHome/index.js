@@ -6,15 +6,11 @@ export default function List() {
     const [selectedItem, setSelectedItem] = useState(null);
 
     const items = [
-        { title: 'Biblioteca', link: 'https://portal.utfpr.edu.br/biblioteca' },
-        { title: 'Calendário Acadêmico', link: 'https://portal.utfpr.edu.br/alunos/calendario' },
         { title: 'Requerimentos', link: 'https://portal.utfpr.edu.br/secretaria/requerimentos' },
         { title: 'Matrícula', link: 'https://portal.utfpr.edu.br/secretaria/matricula/matricula' },
         { title: 'Contato/Ouvidoria', link: 'https://portal.utfpr.edu.br/secretaria/contatos' },
         { title: 'Crachá', link: 'https://portal.utfpr.edu.br/secretaria/contatos' },
         { title: 'Geração de GRU’s', link: 'https://sistemas2.utfpr.edu.br/dpls/sistema/gestaop00/mpgrusimples.inicio' },
-        { title: 'Portal do Aluno', link: 'https://portal.utfpr.edu.br/alunos/portal-do-aluno' },
-        { title: 'Moodle', link: 'https://portal.utfpr.edu.br/alunos/moodle' },
         { title: 'Auxilio Estudantil', link: 'https://portal.utfpr.edu.br/alunos/bolsas/auxilio-estudantil/auxilio-estudantil' },
         { title: 'Programas de Pesquisa', link: 'https://portal.utfpr.edu.br/alunos/bolsas/programas-de-pesquisa-e-inovacao' },
         { title: 'Dupla Diplomação/Internacional', link: 'https://portal.utfpr.edu.br/internacional' },
@@ -55,7 +51,7 @@ export default function List() {
                         <Text style={styles.itemText}>{item.title}</Text>
                         {selectedItem === index && 
                             <View style={styles.expandedArea}>
-                                <Text style={styles.expandedAreaText}>{item.content}</Text>
+                                {/* <Text style={styles.expandedAreaText}>{item.content}</Text> */}
                                 <TouchableOpacity style={styles.button} onPress={() => Linking.openURL(item.link)}>
                                     <Icon name="external-link-square" size={25} color="#fff" />
                                 </TouchableOpacity>
@@ -75,9 +71,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#4B3766',
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20,
+        paddingBottom: 10,
     },
     list: {
-        paddingTop: 40,
+        paddingTop: 30,
+        paddingBottom: 40,
         paddingHorizontal: 15,
         alignItems: 'stretch',
     },
