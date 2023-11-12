@@ -1,5 +1,8 @@
 # UTFPRGuia
 
+<img src="https://github.com/AugustoBSimionato/utfprguia/assets/72254418/4576c592-cf0e-4d49-90a2-86513c7e28f8" />
+<img src="https://github.com/AugustoBSimionato/utfprguia/assets/72254418/7d4324d1-e3ca-497e-9b07-169f8320b24a" />
+
 ## Descrição
 
 Breve descrição do projeto. Aqui você pode explicar o que o projeto faz, qual problema ele resolve e qual é o objetivo do projeto.
