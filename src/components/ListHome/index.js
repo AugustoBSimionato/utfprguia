@@ -31,8 +31,6 @@ export default function List() {
         { title: 'Área do Curso de Licenciatura em Matemática', link: 'https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-licenciatura-em-matematica' },
         { title: 'Área do Curso de Tecnologia em Análise e Desenvolvimento de Sistemas', link: 'https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-tecnologia-em-analise-e-desenvolvimento-de-sistema' },
     ];
-    
-    
 
     return (
         <View style={styles.container}>
