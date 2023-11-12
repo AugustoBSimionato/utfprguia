@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, StyleSheet, TouchableOpacity, Linking, Image } from "react-native";
 
-export default function Board() {
+export default function Board({ navigation }) {
     const openMoodle = () => {
         Linking.openURL('https://moodle.utfpr.edu.br/login/index.php');
     };
@@ -18,7 +18,7 @@ export default function Board() {
         Linking.openURL('https://gradenahora.com.br/utfpr/grade_na_hora.html');
     };
     const openIncubadora = () => {
-        Linking.openURL('http://incubadora.cp.utfpr.edu.br/novo/');
+        navigation.navigate('Map');
     };
 
     return (
@@ -47,8 +47,8 @@ export default function Board() {
                     <Text>GradeNaHora</Text>
                 </View>
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity onPress={openIncubadora} style={styles.button}><Image source={require("../../../assets/calendar.png")} style={{width: 80, height: 75, resizeMode: 'contain'}} /></TouchableOpacity>
-                    <Text>IUT</Text>
+                    <TouchableOpacity onPress={openIncubadora} style={styles.button}><Image source={require("../../../assets/map-icon.png")} style={{width: 80, height: 60, resizeMode: 'contain'}} /></TouchableOpacity>
+                    <Text>Mapa UTFPR</Text>
                 </View>
             </View>
         </View>
