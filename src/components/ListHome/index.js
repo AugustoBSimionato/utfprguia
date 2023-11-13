@@ -69,8 +69,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#4B3766',
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
-        borderBottomLeftRadius: 20,
-        borderBottomRightRadius: 20,
+        // borderBottomLeftRadius: 20,
+        // borderBottomRightRadius: 20,
     },
     list: {
         paddingTop: 30,
