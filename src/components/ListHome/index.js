@@ -71,7 +71,6 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 20,
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
-        paddingBottom: 10,
     },
     list: {
         paddingTop: 30,
