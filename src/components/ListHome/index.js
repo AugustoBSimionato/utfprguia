@@ -6,31 +6,31 @@ export default function List() {
     const [selectedItem, setSelectedItem] = useState(null);
 
     const items = [
-        { title: 'Requerimentos', link: 'https://portal.utfpr.edu.br/secretaria/requerimentos' },
-        { title: 'Matrícula', link: 'https://portal.utfpr.edu.br/secretaria/matricula/matricula' },
-        { title: 'Contato/Ouvidoria', link: 'https://portal.utfpr.edu.br/secretaria/contatos' },
-        { title: 'Crachá', link: 'https://portal.utfpr.edu.br/secretaria/contatos' },
-        { title: 'Geração de GRU’s', link: 'https://sistemas2.utfpr.edu.br/dpls/sistema/gestaop00/mpgrusimples.inicio' },
-        { title: 'Auxilio Estudantil', link: 'https://portal.utfpr.edu.br/alunos/bolsas/auxilio-estudantil/auxilio-estudantil' },
-        { title: 'Programas de Pesquisa', link: 'https://portal.utfpr.edu.br/alunos/bolsas/programas-de-pesquisa-e-inovacao' },
-        { title: 'Dupla Diplomação/Internacional', link: 'https://portal.utfpr.edu.br/internacional' },
-        { title: 'Portal da Informação - UTFPR', link: 'https://portaldeinformacao.utfpr.edu.br/' },
-        { title: 'Editais', link: 'https://portal.utfpr.edu.br/editais#c5=abertos&b_start=0' },
-        { title: 'Instagram', link: 'https://www.instagram.com/UTFPR_/' },
-        { title: 'Twitter', link: 'https://twitter.com/UTFPR_' },
-        { title: 'Facebook', link: 'https://www.facebook.com/UTFPR' },
-        { title: 'YouTube', link: 'https://www.youtube.com/canaldaUTFPR' },
-        { title: 'Flickr', link: 'https://www.flickr.com/photos/utfpr' },
-        { title: 'Linkedin', link: 'https://www.linkedin.com/school/utfpr-oficial/' },
-        { title: 'Docentes do DACOM-CP', link: 'https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-bacharelado-em-engenharia-de-software/area-academica/departamento-academico-de-computacao-dacom' },
-        { title: 'Área do Curso de Bacharelado em Engenharia de Software - CP', link: 'https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-bacharelado-em-engenharia-de-software' },
-        { title: 'Área do Curso de Engenharia de Computação - CP', link: 'https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-engenharia-de-computacao' },
-        { title: 'Área do Curso de Engenharia de Controle e Automação - CP', link: 'https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-engenharia-de-controle-e-automacao' },
-        { title: 'Área do Curso de Engenharia Elétrica - CP', link: 'https://portal.utfpr.edu.br/cursos/graduacao/bacharelado/engenharia-eletrica' },
-        { title: 'Área do Curso de Engenharia Mecânica - CP', link: 'https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-engenharia-mecanica' },
-        { title: 'Área do Curso de Licenciatura em Matemática', link: 'https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-licenciatura-em-matematica' },
-        { title: 'Área do Curso de Tecnologia em Análise e Desenvolvimento de Sistemas', link: 'https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-tecnologia-em-analise-e-desenvolvimento-de-sistema' },
-    ];
+        { title: 'Requerimentos', content: 'Solicite diversos tipos de requerimentos acadêmicos e administrativos.', link: 'https://portal.utfpr.edu.br/secretaria/requerimentos' },
+        { title: 'Matrícula', content: 'Saiba mais sobre o processo de matrícula e as etapas necessárias para garantir sua vaga.', link: 'https://portal.utfpr.edu.br/secretaria/matricula/matricula' },
+        { title: 'Contato/Ouvidoria', content: 'Encontre informações de contato e acesse a ouvidoria para esclarecer dúvidas e fazer sugestões.', link: 'https://portal.utfpr.edu.br/secretaria/contatos' },
+        { title: 'Crachá', content: 'Obtenha informações sobre a emissão e utilização de crachás institucionais.', link: 'https://portal.utfpr.edu.br/secretaria/contatos' },
+        { title: 'Geração de GRUs', content: 'Acesse o sistema para gerar Guias de Recolhimento da União (GRUs) de maneira simples e rápida.', link: 'https://sistemas2.utfpr.edu.br/dpls/sistema/gestaop00/mpgrusimples.inicio' },
+        { title: 'Auxílio Estudantil', content: 'Conheça os programas de auxílio estudantil disponíveis para apoio financeiro aos alunos.', link: 'https://portal.utfpr.edu.br/alunos/bolsas/auxilio-estudantil/auxilio-estudantil' },
+        { title: 'Programas de Pesquisa', content: 'Explore os programas de pesquisa e inovação disponíveis para os estudantes.', link: 'https://portal.utfpr.edu.br/alunos/bolsas/programas-de-pesquisa-e-inovacao' },
+        { title: 'Dupla Diplomação/Internacional', content: 'Informações sobre oportunidades de dupla diplomação e intercâmbio internacional.', link: 'https://portal.utfpr.edu.br/internacional' },
+        { title: 'Portal da Informação - UTFPR', content: 'Acesse o portal de informações da UTFPR para obter notícias, eventos e comunicados.', link: 'https://portaldeinformacao.utfpr.edu.br/' },
+        { title: 'Editais', content: 'Confira os editais em aberto para participar de processos seletivos e projetos.', link: 'https://portal.utfpr.edu.br/editais#c5=abertos&b_start=0' },
+        { title: 'Instagram', content: 'Siga a UTFPR no Instagram para ficar atualizado com fotos e novidades da instituição.', link: 'https://www.instagram.com/UTFPR_/' },
+        { title: 'Twitter', content: 'Acompanhe as últimas notícias e atualizações da UTFPR no Twitter.', link: 'https://twitter.com/UTFPR_' },
+        { title: 'Facebook', content: 'Curta a página da UTFPR no Facebook para interagir e receber atualizações.', link: 'https://www.facebook.com/UTFPR' },
+        { title: 'YouTube', content: 'Assista vídeos educativos e institucionais no canal oficial da UTFPR no YouTube.', link: 'https://www.youtube.com/canaldaUTFPR' },
+        { title: 'Flickr', content: 'Explore galerias de fotos da UTFPR no Flickr para visualizar eventos e atividades.', link: 'https://www.flickr.com/photos/utfpr' },
+        { title: 'Linkedin', content: 'Conecte-se com a UTFPR no Linkedin para networking e oportunidades profissionais.', link: 'https://www.linkedin.com/school/utfpr-oficial/' },
+        { title: 'Docentes do DACOM-CP', content: 'Conheça os docentes do Departamento Acadêmico de Computação em Cornélio Procópio.', link: 'https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-bacharelado-em-engenharia-de-software/area-academica/departamento-academico-de-computacao-dacom' },
+        { title: 'Área do Curso de Bacharelado em Engenharia de Software - CP', content: 'Acesse informações específicas sobre o curso de Bacharelado em Engenharia de Software em Cornélio Procópio.', link: 'https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-bacharelado-em-engenharia-de-software' },
+        { title: 'Área do Curso de Engenharia de Computação - CP', content: 'Saiba mais sobre o curso de Engenharia de Computação oferecido em Cornélio Procópio.', link: 'https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-engenharia-de-computacao' },
+        { title: 'Área do Curso de Engenharia de Controle e Automação - CP', content: 'Explore informações específicas sobre o curso de Engenharia de Controle e Automação em Cornélio Procópio.', link: 'https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-engenharia-de-controle-e-automacao' },
+        { title: 'Área do Curso de Engenharia Elétrica - CP', content: 'Acesse informações detalhadas sobre o curso de Engenharia Elétrica em Cornélio Procópio.', link: 'https://portal.utfpr.edu.br/cursos/graduacao/bacharelado/engenharia-eletrica' },
+        { title: 'Área do Curso de Engenharia Mecânica - CP', content: 'Saiba mais sobre o curso de Engenharia Mecânica oferecido em Cornélio Procópio.', link: 'https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-engenharia-mecanica' },
+        { title: 'Área do Curso de Licenciatura em Matemática', content: 'Acesse informações específicas sobre o curso de Licenciatura em Matemática em Cornélio Procópio.', link: 'https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-licenciatura-em-matematica' },
+        { title: 'Área do Curso de Tecnologia em Análise e Desenvolvimento de Sistemas', content: 'Saiba mais sobre o curso de Tecnologia em Análise e Desenvolvimento de Sistemas em Cornélio Procópio.', link: 'https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-tecnologia-em-analise-e-desenvolvimento-de-sistema' },
+    ];    
 
     return (
         <View style={styles.container}>
@@ -49,7 +49,7 @@ export default function List() {
                         <Text style={styles.itemText}>{item.title}</Text>
                         {selectedItem === index && 
                             <View style={styles.expandedArea}>
-                                {/* <Text style={styles.expandedAreaText}>{item.content}</Text> */}
+                                <Text style={styles.expandedAreaText}>{item.content}</Text>
                                 <TouchableOpacity style={styles.button} onPress={() => Linking.openURL(item.link)}>
                                     <Icon name="external-link-square" size={25} color="#fff" />
                                 </TouchableOpacity>
