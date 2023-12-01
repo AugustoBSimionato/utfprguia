@@ -30,5 +30,5 @@ Instruções de como instalar e configurar o projeto. Por exemplo:
 
 1. Clone este repositório.
 2. Instale as dependências com `npm install` na pasta do projeto.
-3. Inicie o servidor com `npm start`.
-4. Mude para o desenvolvimento usando Expo usando s no terminal depois de iniciar o servidor ou utilize `npx expo start`.
+3. Inicie o servidor com `npx expo start`.
+4. Selecione `a` para abrir simulador Android e `i` para abrir simulador iOS.
